@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <title>台北區監理所愛心服務</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <style>
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            background-color: #f4f7fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            font-size: 20px;
+            color: #34495e;
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 18px;
+            border: 1px solid #dcdcdc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        .radio-group {
+            display: flex;
+            align-items: center; /* 垂直居中對齊 */
+            margin: 10px 0;
+        }
+        .radio-group input[type="radio"] {
+            margin-right: 10px;
+            margin-left: 0;
+            transform: scale(1.2); /* 稍微放大 radio 按鈕 */
+        }
+        .radio-group label {
+            font-size: 18px;
+            margin-bottom: 0; /* 移除 label 的底部間距 */
+            display: inline; /* 確保 label 與 radio 在同一行 */
+        }
+        select {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #dcdcdc;
+            border-radius: 5px;
+            background-color: #fff;
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            font-size: 20px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+                margin: 10px;
+            }
+            h1 {
+                font-size: 24px;
+            }
+            label {
+                font-size: 18px;
+            }
+            input[type="text"], select, button {
+                font-size: 16px;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>台北區監理所愛心服務</h1>
+        <form method="post" action="/old_tpc">
+            <div class="form-group">
+                <label for="name">姓名</label>
+                <input type="text" id="name" name="name" maxlength="10" placeholder="請輸入您的姓名" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">聯絡電話</label>
+                <input type="text" id="phone" name="phone" maxlength="10" placeholder="請輸入您的電話" required>
+            </div>
+            <div class="form-group">
+                <label>請選擇需要的服務</label>
+                <div class="radio-group">
+                    <input type="radio" id="wheelchair" name="choose" value="輪椅服務" required>
+                    <label for="wheelchair">輪椅服務</label>
+                </div>
+                <div class="radio-group">
+                    <input type="radio" id="parking" name="choose" value="尋求停車位">
+                    <label for="parking">尋求停車位</label>
+                </div>
+                <div class="radio-group">
+                    <input type="radio" id="toilet" name="choose" value="公廁急需協助">
+                    <label for="toilet">公廁急需協助</label>
+                </div>
+                <select name="wc" id="wc" style="margin-top: 10px;">
+                    <option value="">請選擇您所在的廁所 (非公廁服務勿選)</option>
+                    <option>A棟1樓大廳男廁</option>
+                    <option>A棟1樓大廳女廁</option>
+                    <option>A棟2樓男女廁（電梯一側）</option>
+                    <option>A棟2樓男女廁（筆試室旁）</option>
+                    <option>A棟3樓男女廁（電梯一側）</option>
+                    <option>A棟3樓男女廁（主計室旁）</option>
+                    <option>A棟4樓男女廁（電梯一側）</option>
+                    <option>A棟4樓男女廁（交安科旁）</option>
+                    <option>B棟1樓男女廁（檢驗場第4車道旁）</option>
+                    <option>C棟1樓男女廁（道安教室）</option>
+                    <option>D棟1樓男女廁（機車考驗場）</option>
+                </select>
+            </div>
+            <button type="submit">提交</button>
+        </form>
+    </div>
+</body>
+</html>

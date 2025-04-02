@@ -12,7 +12,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return render_template('old_people.html')
+    return render_template('old_people_V2.html')
 
 @app.route('/BanQiao')
 def BanQiao_index():
