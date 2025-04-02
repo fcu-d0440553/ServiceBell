@@ -8,17 +8,17 @@ Created on Fri Mar  5 10:03:48 2021
 from flask import Flask, request, render_template
 import requests
 
-token = "7Z3ROFAaMPJ6gKM8OhE1PjngaZw34sF5CUgn6ZSKMkV"
+# token = "7Z3ROFAaMPJ6gKM8OhE1PjngaZw34sF5CUgn6ZSKMkV"
 
-def lineNotifyMessage(token, msg):
-    headers = {
-          "Authorization": "Bearer " + token, 
-          "Content-Type" : "application/x-www-form-urlencoded"
-      }
+# def lineNotifyMessage(token, msg):
+#     headers = {
+#           "Authorization": "Bearer " + token, 
+#           "Content-Type" : "application/x-www-form-urlencoded"
+#       }
 	
-    payload = {'message': msg}
-    r = requests.post("https://notify-api.line.me/api/notify", headers = headers, params = payload)
-    return r.status_code
+#     payload = {'message': msg}
+#     r = requests.post("https://notify-api.line.me/api/notify", headers = headers, params = payload)
+#     return r.status_code
 
 app = Flask(__name__)
 
