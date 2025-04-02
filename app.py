@@ -16,23 +16,23 @@ def index():
 
 @app.route('/BanQiao')
 def BanQiao_index():
-    return render_template('old_people_BanQiao.html')
+    return render_template('old_people_BanQiao_V2.html')
 
 @app.route('/LuZhou')
 def LuZhou_index():
-    return render_template('old_people_LuZhou.html')
+    return render_template('old_people_LuZhou_V2.html')
 
 @app.route('/YiLan')
 def YiLan_index():
-    return render_template('old_people_YiLan.html')
+    return render_template('old_people_YiLan_V2.html')
 
 @app.route('/HuaLian')
 def HuaLian_index():
-    return render_template('old_people_HuaLian.html')
+    return render_template('old_people_HuaLian_V2.html')
 
 @app.route('/YuLi')
 def YuLi_index():
-    return render_template('old_people_YuLi.html')
+    return render_template('old_people_YuLi_V2.html')
 
 @app.route('/old_tpc',methods=['POST','GET'])
 def old_tpc():
