@@ -62,9 +62,9 @@ def old_tpc():
             response = requests.post(WEBHOOKURL, json={msg})
         else:
             msg = "【台北所】身心障礙停車處" + "\n民眾: " + Name + "\n電話: " + Phone + "\n需要  【" + Help + "】  的幫助。"
-            WEBHOOKURL ="https://discord.com/api/webhooks/1347361048566431755/Wz22jAbjw4l6x71QmuaX1he5fzk9lVPUNch65CZnYkkQhvp38LGovSUx8GIcSsym_sbR"
+            #WEBHOOKURL ="https://discord.com/api/webhooks/1347361048566431755/Wz22jAbjw4l6x71QmuaX1he5fzk9lVPUNch65CZnYkkQhvp38LGovSUx8GIcSsym_sbR"
 
-            response = requests.post(WEBHOOKURL, json={msg})
+            #response = requests.post(WEBHOOKURL, json={msg})
         
         result = """
                     <!DOCTYPE html>
