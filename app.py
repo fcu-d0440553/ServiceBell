@@ -57,10 +57,14 @@ def old_tpc():
             WC = request.form.get('wc')
             
             msg = "【台北所】" + "\n民眾: " + Name + "\n電話: " + Phone + "\n【" + Help + "】\n地點在 【" + WC + "】。"
-            lineNotifyMessage(token, msg)
+            WEBHOOKURL ="https://discord.com/api/webhooks/1347361048566431755/Wz22jAbjw4l6x71QmuaX1he5fzk9lVPUNch65CZnYkkQhvp38LGovSUx8GIcSsym_sbR"
+
+            response = requests.post(WEBHOOKURL, json={msg})
         else:
             msg = "【台北所】身心障礙停車處" + "\n民眾: " + Name + "\n電話: " + Phone + "\n需要  【" + Help + "】  的幫助。"
-            lineNotifyMessage(token, msg)
+            WEBHOOKURL ="https://discord.com/api/webhooks/1347361048566431755/Wz22jAbjw4l6x71QmuaX1he5fzk9lVPUNch65CZnYkkQhvp38LGovSUx8GIcSsym_sbR"
+
+            response = requests.post(WEBHOOKURL, json={msg})
         
         result = """
                     <!DOCTYPE html>
@@ -97,10 +101,14 @@ def old_BanQiao():
             WC = request.form.get('wc')
             
             msg = "【板橋站】" + "\n民眾: " + Name + "\n電話: " + Phone + "\n【" + Help + "】\n地點在 【" + WC + "】。"
-            lineNotifyMessage(token, msg)
+            WEBHOOKURL ="https://discord.com/api/webhooks/1347361048566431755/Wz22jAbjw4l6x71QmuaX1he5fzk9lVPUNch65CZnYkkQhvp38LGovSUx8GIcSsym_sbR"
+
+            response = requests.post(WEBHOOKURL, json={msg})
         else:
             msg = "【板橋站】身心障礙停車處" + "\n民眾: " + Name + "\n電話: " + Phone + "\n需要  【" + Help + "】  的幫助。"
-            lineNotifyMessage(token, msg)
+            WEBHOOKURL ="https://discord.com/api/webhooks/1347361048566431755/Wz22jAbjw4l6x71QmuaX1he5fzk9lVPUNch65CZnYkkQhvp38LGovSUx8GIcSsym_sbR"
+
+            response = requests.post(WEBHOOKURL, json={msg})
         
         result = """
                     <!DOCTYPE html>
@@ -137,10 +145,14 @@ def old_LuZhou():
             WC = request.form.get('wc')
             
             msg = "【蘆洲站】" + "\n民眾: " + Name + "\n電話: " + Phone + "\n【" + Help + "】\n地點在 【" + WC + "】。"
-            lineNotifyMessage(token, msg)
+            WEBHOOKURL ="https://discord.com/api/webhooks/1347361048566431755/Wz22jAbjw4l6x71QmuaX1he5fzk9lVPUNch65CZnYkkQhvp38LGovSUx8GIcSsym_sbR"
+
+            response = requests.post(WEBHOOKURL, json={msg})
         else:
             msg = "【蘆洲站】身心障礙停車處" + "\n民眾: " + Name + "\n電話: " + Phone + "\n需要  【" + Help + "】  的幫助。"
-            lineNotifyMessage(token, msg)
+            WEBHOOKURL ="https://discord.com/api/webhooks/1347361048566431755/Wz22jAbjw4l6x71QmuaX1he5fzk9lVPUNch65CZnYkkQhvp38LGovSUx8GIcSsym_sbR"
+
+            response = requests.post(WEBHOOKURL, json={msg})
         
         result = """
                     <!DOCTYPE html>
@@ -177,10 +189,14 @@ def old_YiLan():
             WC = request.form.get('wc')
             
             msg = "【宜蘭站】" + "\n民眾: " + Name + "\n電話: " + Phone + "\n【" + Help + "】\n地點在 【" + WC + "】。"
-            lineNotifyMessage(token, msg)
+            WEBHOOKURL ="https://discord.com/api/webhooks/1347361048566431755/Wz22jAbjw4l6x71QmuaX1he5fzk9lVPUNch65CZnYkkQhvp38LGovSUx8GIcSsym_sbR"
+
+            response = requests.post(WEBHOOKURL, json={msg})
         else:
             msg = "【宜蘭站】身心障礙停車處" + "\n民眾: " + Name + "\n電話: " + Phone + "\n需要  【" + Help + "】  的幫助。"
-            lineNotifyMessage(token, msg)
+            WEBHOOKURL ="https://discord.com/api/webhooks/1347361048566431755/Wz22jAbjw4l6x71QmuaX1he5fzk9lVPUNch65CZnYkkQhvp38LGovSUx8GIcSsym_sbR"
+
+            response = requests.post(WEBHOOKURL, json={msg})
         
         result = """
                     <!DOCTYPE html>
@@ -217,10 +233,14 @@ def old_HuaLian():
             WC = request.form.get('wc')
             
             msg = "【花蓮站】" + "\n民眾: " + Name + "\n電話: " + Phone + "\n【" + Help + "】\n地點在 【" + WC + "】。"
-            lineNotifyMessage(token, msg)
+            WEBHOOKURL ="https://discord.com/api/webhooks/1347361048566431755/Wz22jAbjw4l6x71QmuaX1he5fzk9lVPUNch65CZnYkkQhvp38LGovSUx8GIcSsym_sbR"
+
+            response = requests.post(WEBHOOKURL, json={msg})
         else:
             msg = "【花蓮站】身心障礙停車處" + "\n民眾: " + Name + "\n電話: " + Phone + "\n需要  【" + Help + "】  的幫助。"
-            lineNotifyMessage(token, msg)
+            WEBHOOKURL ="https://discord.com/api/webhooks/1347361048566431755/Wz22jAbjw4l6x71QmuaX1he5fzk9lVPUNch65CZnYkkQhvp38LGovSUx8GIcSsym_sbR"
+
+            response = requests.post(WEBHOOKURL, json={msg})
         
         result = """
                     <!DOCTYPE html>
@@ -257,10 +277,14 @@ def old_YuLi():
             WC = request.form.get('wc')
             
             msg = "【玉里分站】" + "\n民眾: " + Name + "\n電話: " + Phone + "\n【" + Help + "】\n地點在 【" + WC + "】。"
-            lineNotifyMessage(token, msg)
+            WEBHOOKURL ="https://discord.com/api/webhooks/1347361048566431755/Wz22jAbjw4l6x71QmuaX1he5fzk9lVPUNch65CZnYkkQhvp38LGovSUx8GIcSsym_sbR"
+
+            response = requests.post(WEBHOOKURL, json={msg})
         else:
             msg = "【玉里分站】身心障礙停車處" + "\n民眾: " + Name + "\n電話: " + Phone + "\n需要  【" + Help + "】  的幫助。"
-            lineNotifyMessage(token, msg)
+            WEBHOOKURL ="https://discord.com/api/webhooks/1347361048566431755/Wz22jAbjw4l6x71QmuaX1he5fzk9lVPUNch65CZnYkkQhvp38LGovSUx8GIcSsym_sbR"
+
+            response = requests.post(WEBHOOKURL, json={msg})
         
         result = """
                     <!DOCTYPE html>
