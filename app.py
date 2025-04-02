@@ -8,18 +8,6 @@ Created on Fri Mar  5 10:03:48 2021
 from flask import Flask, request, render_template
 import requests
 
-# token = "7Z3ROFAaMPJ6gKM8OhE1PjngaZw34sF5CUgn6ZSKMkV"
-
-# def lineNotifyMessage(token, msg):
-#     headers = {
-#           "Authorization": "Bearer " + token, 
-#           "Content-Type" : "application/x-www-form-urlencoded"
-#       }
-	
-#     payload = {'message': msg}
-#     r = requests.post("https://notify-api.line.me/api/notify", headers = headers, params = payload)
-#     return r.status_code
-
 app = Flask(__name__)
 
 @app.route('/')
@@ -59,13 +47,12 @@ def old_tpc():
             msg = "【台北所】" + "\n民眾: " + Name + "\n電話: " + Phone + "\n【" + Help + "】\n地點在 【" + WC + "】。"
             WEBHOOKURL ="https://discord.com/api/webhooks/1347361048566431755/Wz22jAbjw4l6x71QmuaX1he5fzk9lVPUNch65CZnYkkQhvp38LGovSUx8GIcSsym_sbR"
 
-            response = requests.post(WEBHOOKURL, json={msg})
+            response = requests.post(WEBHOOKURL, json={"content": msg})
         else:
             msg = "【台北所】身心障礙停車處" + "\n民眾: " + Name + "\n電話: " + Phone + "\n需要  【" + Help + "】  的幫助。"
-            #WEBHOOKURL ="https://discord.com/api/webhooks/1347361048566431755/Wz22jAbjw4l6x71QmuaX1he5fzk9lVPUNch65CZnYkkQhvp38LGovSUx8GIcSsym_sbR"
+            WEBHOOKURL ="https://discord.com/api/webhooks/1347361048566431755/Wz22jAbjw4l6x71QmuaX1he5fzk9lVPUNch65CZnYkkQhvp38LGovSUx8GIcSsym_sbR"
 
-            #response = requests.post(WEBHOOKURL, json={msg})
-        
+            response = requests.post(WEBHOOKURL, json={"content": msg})
         result = """
                     <!DOCTYPE html>
                     <html lang="zh" font-size: 100%;>
@@ -103,12 +90,12 @@ def old_BanQiao():
             msg = "【板橋站】" + "\n民眾: " + Name + "\n電話: " + Phone + "\n【" + Help + "】\n地點在 【" + WC + "】。"
             WEBHOOKURL ="https://discord.com/api/webhooks/1347361048566431755/Wz22jAbjw4l6x71QmuaX1he5fzk9lVPUNch65CZnYkkQhvp38LGovSUx8GIcSsym_sbR"
 
-            response = requests.post(WEBHOOKURL, json={msg})
+            response = requests.post(WEBHOOKURL, json={"content": msg})
         else:
             msg = "【板橋站】身心障礙停車處" + "\n民眾: " + Name + "\n電話: " + Phone + "\n需要  【" + Help + "】  的幫助。"
             WEBHOOKURL ="https://discord.com/api/webhooks/1347361048566431755/Wz22jAbjw4l6x71QmuaX1he5fzk9lVPUNch65CZnYkkQhvp38LGovSUx8GIcSsym_sbR"
 
-            response = requests.post(WEBHOOKURL, json={msg})
+            response = requests.post(WEBHOOKURL, json={"content": msg})
         
         result = """
                     <!DOCTYPE html>
@@ -147,12 +134,12 @@ def old_LuZhou():
             msg = "【蘆洲站】" + "\n民眾: " + Name + "\n電話: " + Phone + "\n【" + Help + "】\n地點在 【" + WC + "】。"
             WEBHOOKURL ="https://discord.com/api/webhooks/1347361048566431755/Wz22jAbjw4l6x71QmuaX1he5fzk9lVPUNch65CZnYkkQhvp38LGovSUx8GIcSsym_sbR"
 
-            response = requests.post(WEBHOOKURL, json={msg})
+            response = requests.post(WEBHOOKURL, json={"content": msg})
         else:
             msg = "【蘆洲站】身心障礙停車處" + "\n民眾: " + Name + "\n電話: " + Phone + "\n需要  【" + Help + "】  的幫助。"
             WEBHOOKURL ="https://discord.com/api/webhooks/1347361048566431755/Wz22jAbjw4l6x71QmuaX1he5fzk9lVPUNch65CZnYkkQhvp38LGovSUx8GIcSsym_sbR"
 
-            response = requests.post(WEBHOOKURL, json={msg})
+            response = requests.post(WEBHOOKURL, json={"content": msg})
         
         result = """
                     <!DOCTYPE html>
@@ -191,12 +178,12 @@ def old_YiLan():
             msg = "【宜蘭站】" + "\n民眾: " + Name + "\n電話: " + Phone + "\n【" + Help + "】\n地點在 【" + WC + "】。"
             WEBHOOKURL ="https://discord.com/api/webhooks/1347361048566431755/Wz22jAbjw4l6x71QmuaX1he5fzk9lVPUNch65CZnYkkQhvp38LGovSUx8GIcSsym_sbR"
 
-            response = requests.post(WEBHOOKURL, json={msg})
+            response = requests.post(WEBHOOKURL, json={"content": msg})
         else:
             msg = "【宜蘭站】身心障礙停車處" + "\n民眾: " + Name + "\n電話: " + Phone + "\n需要  【" + Help + "】  的幫助。"
             WEBHOOKURL ="https://discord.com/api/webhooks/1347361048566431755/Wz22jAbjw4l6x71QmuaX1he5fzk9lVPUNch65CZnYkkQhvp38LGovSUx8GIcSsym_sbR"
 
-            response = requests.post(WEBHOOKURL, json={msg})
+            response = requests.post(WEBHOOKURL, json={"content": msg})
         
         result = """
                     <!DOCTYPE html>
@@ -235,12 +222,12 @@ def old_HuaLian():
             msg = "【花蓮站】" + "\n民眾: " + Name + "\n電話: " + Phone + "\n【" + Help + "】\n地點在 【" + WC + "】。"
             WEBHOOKURL ="https://discord.com/api/webhooks/1347361048566431755/Wz22jAbjw4l6x71QmuaX1he5fzk9lVPUNch65CZnYkkQhvp38LGovSUx8GIcSsym_sbR"
 
-            response = requests.post(WEBHOOKURL, json={msg})
+            response = requests.post(WEBHOOKURL, json={"content": msg})
         else:
             msg = "【花蓮站】身心障礙停車處" + "\n民眾: " + Name + "\n電話: " + Phone + "\n需要  【" + Help + "】  的幫助。"
             WEBHOOKURL ="https://discord.com/api/webhooks/1347361048566431755/Wz22jAbjw4l6x71QmuaX1he5fzk9lVPUNch65CZnYkkQhvp38LGovSUx8GIcSsym_sbR"
 
-            response = requests.post(WEBHOOKURL, json={msg})
+            response = requests.post(WEBHOOKURL, json={"content": msg})
         
         result = """
                     <!DOCTYPE html>
@@ -279,12 +266,12 @@ def old_YuLi():
             msg = "【玉里分站】" + "\n民眾: " + Name + "\n電話: " + Phone + "\n【" + Help + "】\n地點在 【" + WC + "】。"
             WEBHOOKURL ="https://discord.com/api/webhooks/1347361048566431755/Wz22jAbjw4l6x71QmuaX1he5fzk9lVPUNch65CZnYkkQhvp38LGovSUx8GIcSsym_sbR"
 
-            response = requests.post(WEBHOOKURL, json={msg})
+            response = requests.post(WEBHOOKURL, json={"content": msg})
         else:
             msg = "【玉里分站】身心障礙停車處" + "\n民眾: " + Name + "\n電話: " + Phone + "\n需要  【" + Help + "】  的幫助。"
             WEBHOOKURL ="https://discord.com/api/webhooks/1347361048566431755/Wz22jAbjw4l6x71QmuaX1he5fzk9lVPUNch65CZnYkkQhvp38LGovSUx8GIcSsym_sbR"
 
-            response = requests.post(WEBHOOKURL, json={msg})
+            response = requests.post(WEBHOOKURL, json={"content": msg})
         
         result = """
                     <!DOCTYPE html>
